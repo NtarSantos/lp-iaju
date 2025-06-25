@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,18 +20,44 @@ const LeadForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    console.log("Form submitted:", formData);
-    
-    toast({
-      title: "Solicitação enviada com sucesso!",
-      description: "Entraremos em contato em breve para agendar sua demonstração.",
-    });
-    
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+    try {
+      console.log("Enviando dados para o webhook:", formData);
+      
+      // Enviar dados para o webhook n8n
+      const response = await fetch("https://n8n-n8n.ain39p.easypanel.host/webhook/3a573bb6-5e52-4b94-bc8e-b42465d40c2e", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nome: formData.nome,
+          telefone: formData.telefone,
+          email: formData.email,
+          timestamp: new Date().toISOString(),
+          origem: "Landing Page WhatsApp AI"
+        }),
+      });
+
+      if (response.ok) {
+        console.log("Dados enviados com sucesso para o webhook");
+        toast({
+          title: "Solicitação enviada com sucesso!",
+          description: "Entraremos em contato em breve para agendar sua demonstração.",
+        });
+        setIsSubmitted(true);
+      } else {
+        throw new Error("Erro ao enviar dados para o webhook");
+      }
+    } catch (error) {
+      console.error("Erro ao enviar dados:", error);
+      toast({
+        title: "Erro ao enviar solicitação",
+        description: "Ocorreu um erro. Tente novamente em alguns instantes.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
