@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { MessageCircle, CheckCircle2 } from "lucide-react";
+import { MessageCircle, CheckCircle2, ArrowLeft } from "lucide-react";
 
 const LeadForm = () => {
   const [formData, setFormData] = useState({
@@ -67,6 +67,15 @@ const LeadForm = () => {
     });
   };
 
+  const handleNewRequest = () => {
+    setIsSubmitted(false);
+    setFormData({
+      nome: "",
+      telefone: "",
+      email: ""
+    });
+  };
+
   if (isSubmitted) {
     return (
       <section id="lead-form" className="py-20 bg-gradient-to-br from-whatsapp-50 to-white">
@@ -83,7 +92,7 @@ const LeadForm = () => {
                 <p className="text-gray-600 mb-6">
                   Recebemos sua solicitação e entraremos em contato em breve para agendar sua demonstração personalizada.
                 </p>
-                <div className="bg-whatsapp-50 p-4 rounded-lg">
+                <div className="bg-whatsapp-50 p-4 rounded-lg mb-6">
                   <p className="text-sm text-whatsapp-700">
                     <strong>Próximos passos:</strong><br />
                     1. Análise do seu negócio<br />
@@ -91,6 +100,14 @@ const LeadForm = () => {
                     3. Configuração gratuita
                   </p>
                 </div>
+                <Button
+                  onClick={handleNewRequest}
+                  variant="outline"
+                  className="w-full h-12 border-whatsapp-200 text-whatsapp-600 hover:bg-whatsapp-50 font-semibold rounded-xl"
+                >
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Nova solicitação
+                </Button>
               </CardContent>
             </Card>
           </div>
