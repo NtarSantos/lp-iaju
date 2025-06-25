@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -24,13 +23,11 @@ const LeadForm = () => {
     try {
       console.log("Enviando dados para o webhook:", formData);
       
-      // Enviar dados para o webhook n8n com configurações de CORS
-      const response = await fetch("https://n8n-n8n.ain39p.easypanel.host/webhook/3a573bb6-5e52-4b94-bc8e-b42465d40c2e", {
+      const response = await fetch("https://n8n-n8n.ain39p.easypanel.host/webhook-test/3a573bb6-5e52-4b94-bc8e-b42465d40c2e", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "no-cors", // Adicionar para contornar problemas de CORS
         body: JSON.stringify({
           nome: formData.nome,
           telefone: formData.telefone,
@@ -40,53 +37,24 @@ const LeadForm = () => {
         }),
       });
 
-      // Com no-cors, não conseguimos verificar o status da resposta
-      // Então vamos assumir que foi enviado com sucesso
-      console.log("Dados enviados para o webhook (modo no-cors)");
-      toast({
-        title: "Solicitação enviada com sucesso!",
-        description: "Entraremos em contato em breve para agendar sua demonstração.",
-      });
-      setIsSubmitted(true);
+      if (response.ok) {
+        console.log("Dados enviados com sucesso para o webhook");
+        toast({
+          title: "Solicitação enviada com sucesso!",
+          description: "Entraremos em contato em breve para agendar sua demonstração.",
+        });
+        setIsSubmitted(true);
+      } else {
+        throw new Error(`Erro HTTP: ${response.status}`);
+      }
       
     } catch (error) {
       console.error("Erro ao enviar dados:", error);
-      
-      // Tentar novamente sem no-cors como fallback
-      try {
-        console.log("Tentando envio sem no-cors...");
-        const fallbackResponse = await fetch("https://n8n-n8n.ain39p.easypanel.host/webhook/3a573bb6-5e52-4b94-bc8e-b42465d40c2e", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            nome: formData.nome,
-            telefone: formData.telefone,
-            email: formData.email,
-            timestamp: new Date().toISOString(),
-            origem: "Landing Page WhatsApp AI"
-          }),
-        });
-
-        if (fallbackResponse.ok) {
-          console.log("Dados enviados com sucesso no fallback");
-          toast({
-            title: "Solicitação enviada com sucesso!",
-            description: "Entraremos em contato em breve para agendar sua demonstração.",
-          });
-          setIsSubmitted(true);
-        } else {
-          throw new Error(`Erro HTTP: ${fallbackResponse.status}`);
-        }
-      } catch (fallbackError) {
-        console.error("Erro no fallback:", fallbackError);
-        toast({
-          title: "Erro ao enviar solicitação",
-          description: "Ocorreu um erro de conectividade. Verifique sua conexão e tente novamente.",
-          variant: "destructive",
-        });
-      }
+      toast({
+        title: "Erro ao enviar solicitação",
+        description: "Ocorreu um erro de conectividade. Verifique sua conexão e tente novamente.",
+        variant: "destructive",
+      });
     } finally {
       setIsSubmitting(false);
     }
