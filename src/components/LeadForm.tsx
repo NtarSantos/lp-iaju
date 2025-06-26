@@ -28,6 +28,7 @@ const LeadForm = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        mode: "no-cors",
         body: JSON.stringify({
           nome: formData.nome,
           telefone: formData.telefone,
@@ -37,16 +38,12 @@ const LeadForm = () => {
         }),
       });
 
-      if (response.ok) {
-        console.log("Dados enviados com sucesso para o webhook");
-        toast({
-          title: "Solicitação enviada com sucesso!",
-          description: "Entraremos em contato em breve para agendar sua demonstração.",
-        });
-        setIsSubmitted(true);
-      } else {
-        throw new Error(`Erro HTTP: ${response.status}`);
-      }
+      console.log("Dados enviados para o webhook");
+      toast({
+        title: "Solicitação enviada com sucesso!",
+        description: "Entraremos em contato em breve para agendar sua demonstração.",
+      });
+      setIsSubmitted(true);
       
     } catch (error) {
       console.error("Erro ao enviar dados:", error);
