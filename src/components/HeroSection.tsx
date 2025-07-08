@@ -60,11 +60,11 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
             <div className="mt-12 flex items-center justify-center lg:justify-start space-x-8 text-sm text-gray-500">
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-whatsapp-500 rounded-full mr-2"></div>
-                Setup em 5 minutos
+                Setup em menos de uma semana!
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-whatsapp-500 rounded-full mr-2"></div>
-                Sem mensalidade inicial
+                Adiquira já o seu agente de IA!
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-whatsapp-500 rounded-full mr-2"></div>
