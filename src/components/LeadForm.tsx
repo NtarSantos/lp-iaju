@@ -248,8 +248,7 @@ const LeadForm = () => {
               <div className="bg-whatsapp-50 p-6 rounded-xl">
                 <h4 className="font-semibold text-whatsapp-800 mb-2">🚀 Oferta Especial</h4>
                 <p className="text-whatsapp-700 text-sm">
-                  Setup gratuito para os primeiros 50 cadastros este mês. 
-                  Economize R$ 497 na implementação!
+                  Setup mais em conta, por tempo limitado, não perca essa chance!
                 </p>
               </div>
             </div>
