@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "5579995666997"; // Número sem espaços e caracteres especiais
+  const phoneNumber = "557999566997"; // Número atualizado
   const message = "Olá! Gostaria de saber mais informações sobre o Agente de IA WhatsApp.";
   
   const handleWhatsAppClick = () => {
@@ -14,7 +14,7 @@ const WhatsAppButton = () => {
   return (
     <Button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-whatsapp-500 hover:bg-whatsapp-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-float"
+      className="fixed bottom-6 right-4 sm:right-6 z-50 h-14 w-14 rounded-full bg-whatsapp-500 hover:bg-whatsapp-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-float"
       size="icon"
     >
       <MessageCircle className="w-6 h-6" />
