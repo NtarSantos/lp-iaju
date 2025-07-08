@@ -65,7 +65,7 @@ const BenefitsSection = () => {
                     <div className="text-2xl font-bold text-whatsapp-600">24h</div>
                   )}
                   {index === 1 && (
-                    <div className="text-2xl font-bold text-blue-600">&lt;2s</div>
+                    <div className="text-2xl font-bold text-blue-600">&lt;10s</div>
                   )}
                   {index === 2 && (
                     <div className="text-2xl font-bold text-purple-600">-70%</div>
@@ -90,13 +90,13 @@ const BenefitsSection = () => {
             </div>
             <div className="w-px h-8 bg-gray-300"></div>
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-whatsapp-600 mr-2">500+</span>
-              <span className="text-sm">Empresas confiam</span>
+              <span className="text-2xl font-bold text-whatsapp-600 mr-2">+30%</span>
+              <span className="text-sm">Empresas usam.</span>
             </div>
             <div className="w-px h-8 bg-gray-300"></div>
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-whatsapp-600 mr-2">10k+</span>
-              <span className="text-sm">Atendimentos por dia</span>
+              <span className="text-2xl font-bold text-whatsapp-600 mr-2">20%+</span>
+              <span className="text-sm">Hoje dos atendimentos são com IAs</span>
             </div>
           </div>
         </div>
