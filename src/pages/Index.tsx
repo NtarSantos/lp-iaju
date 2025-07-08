@@ -2,6 +2,7 @@
 import HeroSection from "@/components/HeroSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import LeadForm from "@/components/LeadForm";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   const scrollToForm = () => {
@@ -16,6 +17,9 @@ const Index = () => {
       <HeroSection onCtaClick={scrollToForm} />
       <BenefitsSection />
       <LeadForm />
+      
+      {/* WhatsApp Button */}
+      <WhatsAppButton />
       
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
