@@ -20,10 +20,6 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
           <div className="text-center lg:text-left animate-fade-in">
-            <div className="inline-flex items-center px-4 py-2 bg-whatsapp-100 rounded-full text-whatsapp-700 text-sm font-medium mb-6">
-              <MessageCircle className="w-4 h-4 mr-2" />
-              Powered by AI Technology
-            </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Atendimento Inteligente e{" "}
