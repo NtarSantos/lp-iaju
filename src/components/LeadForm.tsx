@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,7 +24,7 @@ const LeadForm = () => {
     try {
       console.log("Enviando dados para o webhook:", formData);
       
-      const response = await fetch("https://n8n-n8n.ain39p.easypanel.host/webhook-test/3a573bb6-5e52-4b94-bc8e-b42465d40c2e", {
+      const response = await fetch("https://n8n-n8n.ain39p.easypanel.host/webhook/91c61325-5c39-4db8-86cc-3b0fd0977dce", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
