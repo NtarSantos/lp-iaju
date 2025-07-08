@@ -91,11 +91,11 @@ const BenefitsSection = () => {
             <div className="w-px h-8 bg-gray-300"></div>
             <div className="flex items-center">
               <span className="text-2xl font-bold text-whatsapp-600 mr-2">+30%</span>
-              <span className="text-sm">Empresas usam.</span>
+              <span className="text-sm">Empresas usam</span>
             </div>
             <div className="w-px h-8 bg-gray-300"></div>
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-whatsapp-600 mr-2">20%+</span>
+              <span className="text-2xl font-bold text-whatsapp-600 mr-2">+20%</span>
               <span className="text-sm">Hoje dos atendimentos são com IAs</span>
             </div>
           </div>
