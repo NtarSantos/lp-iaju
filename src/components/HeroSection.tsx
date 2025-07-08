@@ -47,14 +47,6 @@ const HeroSection = ({ onCtaClick }: HeroSectionProps) => {
               >
                 Quero uma demonstração
               </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-2 border-whatsapp-600 text-whatsapp-600 hover:bg-whatsapp-50 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300"
-              >
-                Ver como funciona
-              </Button>
             </div>
             
             <div className="mt-12 flex items-center justify-center lg:justify-start space-x-8 text-sm text-gray-500">
