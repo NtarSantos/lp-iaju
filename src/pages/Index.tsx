@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import LeadForm from "@/components/LeadForm";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import Header from "@/components/Header";
 
 const Index = () => {
   const scrollToForm = () => {
@@ -15,7 +14,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      <Header />
       <HeroSection onCtaClick={scrollToForm} />
       <BenefitsSection />
       <LeadForm />
