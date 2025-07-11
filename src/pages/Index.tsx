@@ -18,8 +18,13 @@ const Index = () => {
       <BenefitsSection />
       <LeadForm />
       
-      {/* WhatsApp Button */}
-      <WhatsAppButton />
+      {/* WhatsApp Button - Mobile: inline, Desktop: fixed */}
+      <div className="sm:hidden container mx-auto px-6 py-8">
+        <WhatsAppButton />
+      </div>
+      <div className="hidden sm:block">
+        <WhatsAppButton />
+      </div>
       
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">

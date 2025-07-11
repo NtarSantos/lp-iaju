@@ -14,10 +14,11 @@ const WhatsAppButton = () => {
   return (
     <Button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-3 sm:right-6 z-50 h-12 w-12 sm:h-14 sm:w-14 rounded-full bg-yellow-500 hover:bg-yellow-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-float"
+      className="sm:fixed sm:bottom-6 sm:right-6 sm:z-50 w-full sm:w-14 h-14 sm:rounded-full rounded-lg bg-yellow-500 hover:bg-yellow-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 sm:animate-float flex items-center justify-center gap-2 sm:gap-0"
       size="icon"
     >
       <MessageCircle className="w-6 h-6" />
+      <span className="sm:hidden font-medium">Falar no WhatsApp</span>
     </Button>
   );
 };
