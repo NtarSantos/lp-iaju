@@ -14,7 +14,7 @@ const WhatsAppButton = () => {
   return (
     <Button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-4 sm:right-6 z-50 h-14 w-14 rounded-full bg-yellow-500 hover:bg-yellow-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-float"
+      className="fixed bottom-6 right-3 sm:right-6 z-50 h-12 w-12 sm:h-14 sm:w-14 rounded-full bg-yellow-500 hover:bg-yellow-600 text-white shadow-lg hover:shadow-xl transition-all duration-300 animate-float"
       size="icon"
     >
       <MessageCircle className="w-6 h-6" />
