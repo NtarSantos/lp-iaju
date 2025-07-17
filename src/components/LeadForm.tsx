@@ -24,7 +24,7 @@ const LeadForm = () => {
     try {
       console.log("Enviando dados para o webhook:", formData);
       
-      const response = await fetch("https://n8n-n8n.ain39p.easypanel.host/webhook/91c61325-5c39-4db8-86cc-3b0fd0977dce", {
+      const response = await fetch("https://iaju-n8n-webhook.pmqg3g.easypanel.host/webhook/3a573bb6-5e52-4b94-bc8e-b42465d40c2e", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
