@@ -7,22 +7,22 @@ const BenefitsSection = () => {
       icon: Clock,
       title: "Atendimento 24/7",
       description: "Seu negócio sempre disponível para atender, mesmo fora do horário comercial.",
-      color: "text-yellow-600",
-      bgColor: "bg-yellow-100"
+      color: "text-primary",
+      bgColor: "bg-primary/10"
     },
     {
       icon: Zap,
       title: "Respostas Instantâneas", 
       description: "Acabe com as filas e a insatisfação. Soluções na hora para seus clientes.",
-      color: "text-navy-600",
-      bgColor: "bg-navy-100"
+      color: "text-secondary-foreground",
+      bgColor: "bg-secondary/10"
     },
     {
       icon: Settings,
       title: "Automação Eficiente",
       description: "Reduza a carga da sua equipe e os custos operacionais com um atendimento automatizado.",
-      color: "text-gray-600", 
-      bgColor: "bg-gray-100"
+      color: "text-accent-foreground", 
+      bgColor: "bg-accent/10"
     }
   ];
 
@@ -30,9 +30,9 @@ const BenefitsSection = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-navy-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-secondary-foreground mb-4">
             Por que escolher nosso{" "}
-            <span className="text-yellow-600">Agente de IA</span>?
+            <span className="text-primary">Agente de IA</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transforme o atendimento do seu negócio com tecnologia de ponta que nunca para de trabalhar
@@ -51,7 +51,7 @@ const BenefitsSection = () => {
                   <IconComponent className={`w-8 h-8 ${benefit.color}`} />
                 </div>
                 
-                <h3 className="text-xl font-bold text-navy-900 mb-4">
+                <h3 className="text-xl font-bold text-secondary-foreground mb-4">
                   {benefit.title}
                 </h3>
                 
@@ -62,13 +62,13 @@ const BenefitsSection = () => {
                 {/* Stats or additional info */}
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   {index === 0 && (
-                    <div className="text-2xl font-bold text-yellow-600">24h</div>
+                    <div className="text-2xl font-bold text-primary">24h</div>
                   )}
                   {index === 1 && (
-                    <div className="text-2xl font-bold text-navy-600">&lt;10s</div>
+                    <div className="text-2xl font-bold text-secondary-foreground">&lt;10s</div>
                   )}
                   {index === 2 && (
-                    <div className="text-2xl font-bold text-gray-600">-70%</div>
+                    <div className="text-2xl font-bold text-accent-foreground">-70%</div>
                   )}
                   <div className="text-sm text-gray-500 mt-1">
                     {index === 0 && "Disponibilidade"}
@@ -85,17 +85,17 @@ const BenefitsSection = () => {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center justify-center space-x-8 text-gray-400">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-yellow-600 mr-2">98%</span>
+              <span className="text-2xl font-bold text-primary mr-2">98%</span>
               <span className="text-sm">Satisfação dos clientes</span>
             </div>
             <div className="w-px h-8 bg-gray-300"></div>
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-yellow-600 mr-2">+30%</span>
+              <span className="text-2xl font-bold text-primary mr-2">+30%</span>
               <span className="text-sm">Empresas usam</span>
             </div>
             <div className="w-px h-8 bg-gray-300"></div>
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-yellow-600 mr-2">+20%</span>
+              <span className="text-2xl font-bold text-primary mr-2">+20%</span>
               <span className="text-sm">Hoje dos atendimentos são com IAs</span>
             </div>
           </div>

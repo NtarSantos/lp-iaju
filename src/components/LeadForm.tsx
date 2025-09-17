@@ -76,22 +76,22 @@ const LeadForm = () => {
 
   if (isSubmitted) {
     return (
-      <section id="lead-form" className="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100">
+      <section id="lead-form" className="py-20 bg-gradient-to-br from-primary/10 to-primary/20">
         <div className="container mx-auto px-6">
           <div className="max-w-md mx-auto">
             <Card className="shadow-xl border-0 bg-white">
               <CardContent className="p-12 text-center">
-                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle2 className="w-8 h-8 text-yellow-600" />
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle2 className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-navy-900 mb-4">
+                <h3 className="text-2xl font-bold text-secondary-foreground mb-4">
                   Obrigado pelo interesse!
                 </h3>
                 <p className="text-gray-600 mb-6">
                   Recebemos sua solicitação e entraremos em contato em breve para agendar sua demonstração personalizada.
                 </p>
-                <div className="bg-yellow-50 p-4 rounded-lg mb-6">
-                  <p className="text-sm text-yellow-700">
+                <div className="bg-primary/10 p-4 rounded-lg mb-6">
+                  <p className="text-sm text-primary">
                     <strong>Próximos passos:</strong><br />
                     1. Análise do seu negócio<br />
                     2. Demonstração personalizada<br />
@@ -101,7 +101,7 @@ const LeadForm = () => {
                 <Button
                   onClick={handleNewRequest}
                   variant="outline"
-                  className="w-full h-12 border-yellow-300 text-yellow-700 hover:bg-yellow-50 font-semibold rounded-xl"
+                  className="w-full h-12 border-primary/30 text-primary hover:bg-primary/10 font-semibold rounded-xl"
                 >
                   <ArrowLeft className="w-4 h-4 mr-2" />
                   Nova solicitação
@@ -115,7 +115,7 @@ const LeadForm = () => {
   }
 
   return (
-    <section id="lead-form" className="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100">
+    <section id="lead-form" className="py-20 bg-gradient-to-br from-primary/10 to-primary/20">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -123,10 +123,10 @@ const LeadForm = () => {
             <div>
               <Card className="shadow-xl border-0 bg-white">
                 <CardHeader className="text-center pb-2">
-                  <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <MessageCircle className="w-6 h-6 text-yellow-600" />
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <MessageCircle className="w-6 h-6 text-primary" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-navy-900">
+                  <CardTitle className="text-2xl font-bold text-secondary-foreground">
                     Solicite uma Demonstração
                   </CardTitle>
                   <CardDescription className="text-gray-600">
@@ -148,7 +148,7 @@ const LeadForm = () => {
                         value={formData.nome}
                         onChange={handleInputChange}
                         required
-                        className="h-12 border-gray-200 focus:border-yellow-500 focus:ring-yellow-500"
+                        className="h-12 border-gray-200 focus:border-primary focus:ring-primary"
                       />
                     </div>
                     
@@ -164,7 +164,7 @@ const LeadForm = () => {
                         value={formData.telefone}
                         onChange={handleInputChange}
                         required
-                        className="h-12 border-gray-200 focus:border-yellow-500 focus:ring-yellow-500"
+                        className="h-12 border-gray-200 focus:border-primary focus:ring-primary"
                       />
                     </div>
                     
@@ -180,14 +180,14 @@ const LeadForm = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="h-12 border-gray-200 focus:border-yellow-500 focus:ring-yellow-500"
+                        className="h-12 border-gray-200 focus:border-primary focus:ring-primary"
                       />
                     </div>
                     
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full h-12 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="w-full h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       {isSubmitting ? (
                         <div className="flex items-center">
@@ -210,45 +210,45 @@ const LeadForm = () => {
             {/* Right side - Benefits recap */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-navy-900 mb-4">
+                <h3 className="text-2xl font-bold text-secondary-foreground mb-4">
                   O que você receberá:
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-yellow-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <CheckCircle2 className="w-4 h-4 text-white" />
+                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <CheckCircle2 className="w-4 h-4 text-primary-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-navy-900">Demonstração Personalizada</h4>
+                      <h4 className="font-semibold text-secondary-foreground">Demonstração Personalizada</h4>
                       <p className="text-gray-600 text-sm">Veja o sistema funcionando com exemplos do seu segmento</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-yellow-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <CheckCircle2 className="w-4 h-4 text-white" />
+                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <CheckCircle2 className="w-4 h-4 text-primary-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-navy-900">Análise Gratuita</h4>
+                      <h4 className="font-semibold text-secondary-foreground">Análise Gratuita</h4>
                       <p className="text-gray-600 text-sm">Avaliação de como otimizar seu atendimento atual</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-yellow-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <CheckCircle2 className="w-4 h-4 text-white" />
+                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <CheckCircle2 className="w-4 h-4 text-primary-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-navy-900">Proposta Personalizada</h4>
+                      <h4 className="font-semibold text-secondary-foreground">Proposta Personalizada</h4>
                       <p className="text-gray-600 text-sm">Plano sob medida para as necessidades do seu negócio</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-yellow-50 p-6 rounded-xl">
-                <h4 className="font-semibold text-yellow-800 mb-2">🚀 Oferta Especial</h4>
-                <p className="text-yellow-700 text-sm">
+              <div className="bg-primary/10 p-6 rounded-xl">
+                <h4 className="font-semibold text-primary mb-2">🚀 Oferta Especial</h4>
+                <p className="text-primary text-sm">
                   Setup mais em conta, por tempo limitado, não perca essa chance!
                 </p>
               </div>
